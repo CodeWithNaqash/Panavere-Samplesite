@@ -14,8 +14,13 @@ import {
 
 export default function Header() {
   return (
-    <Box pt={5} as="header">
-      <Flex justifyContent={'space-around'} alignItems="center">
+    <Box as="header" position={'sticky'} top={0} zIndex={1}>
+      <Flex
+        py={3}
+        justifyContent={'space-around'}
+        alignItems="center"
+        bg={'white'}
+      >
         {/* left area */}
         <Box>
           <HStack>
