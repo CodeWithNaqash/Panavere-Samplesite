@@ -11,10 +11,10 @@ export default function FAQ() {
   return (
     <Box as="section" my={20}>
       <Container maxW={1100}>
-        <Flex>
+        <Flex flexDirection={{ base: 'column', md: 'row' }}>
           {/* Left Section */}
           <Box flex={2}>
-            <Box textAlign={'left'} mr={20}>
+            <Box textAlign={'left'} mr={20} mb={{ base: 10, md: 10 }}>
               <Text
                 color={'blue.500'}
                 fontWeight={'bold'}

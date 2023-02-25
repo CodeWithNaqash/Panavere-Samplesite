@@ -7,6 +7,7 @@ import {
   HStack,
   Flex,
   Link,
+  Hide,
 } from '@chakra-ui/react';
 import { Avatar, AvatarBadge, AvatarGroup } from '@chakra-ui/react';
 function TopContainer() {
@@ -16,12 +17,15 @@ function TopContainer() {
       backgroundSize="contain"
       backgroundAttachment={'fixed'}
       py={20}
-      mt="3"
       as="section"
     >
       <HStack>
         {/* Left Box */}
-        <Box width={'50%'} textColor={'white'} pl="44">
+        <Box
+          width={{ lg: '50%', base: '100%' }}
+          textColor={'white'}
+          pl={{ base: '10', lg: '44' }}
+        >
           <Heading fontSize={60}>Build your next idea even faster</Heading>
           <Text lineHeight={'10'}>
             One Year Panaverse DAO Earn as you Learn Program. Consolidating Web
@@ -80,9 +84,11 @@ function TopContainer() {
         </Box>
 
         {/* Rigth Box */}
-        <Box width={'50%'}>
-          <Image src="/images/banner.webp" alt="Loading Error"></Image>
-        </Box>
+        <Hide below="lg">
+          <Box width={'50%'}>
+            <Image src="/images/banner.webp" alt="Loading Error"></Image>
+          </Box>
+        </Hide>
       </HStack>
     </Box>
   );

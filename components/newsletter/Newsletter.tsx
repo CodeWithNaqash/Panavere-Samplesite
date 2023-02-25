@@ -7,13 +7,24 @@ import {
   Flex,
   Input,
   Text,
+  useColorMode,
 } from '@chakra-ui/react';
 
 export default function Newsletter() {
+  const { colorMode } = useColorMode();
+
   return (
     <Box>
-      <Container bg={'gray.50'} maxW="100%" py={10} my={'20'}>
-        <Flex justifyContent={'space-around'}>
+      <Container
+        bg={colorMode == 'light' ? 'gray.50' : 'black'}
+        maxW="100%"
+        py={10}
+        my={'20'}
+      >
+        <Flex
+          justifyContent={'space-around'}
+          flexDirection={{ base: 'column', md: 'row' }}
+        >
           <Box>
             <Heading fontWeight={'semibold'}>Join our Newletter</Heading>
             <Text mt={5}>

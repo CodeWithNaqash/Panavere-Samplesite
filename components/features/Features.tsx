@@ -33,7 +33,7 @@ function Features() {
       <Container maxW={'1100'}>
         {/* Feature Section Start*/}
         <Box>
-          <SimpleGrid columns={2} spacing={8}>
+          <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
             {/* Feature 1 */}
             <Box>
               <HStack>

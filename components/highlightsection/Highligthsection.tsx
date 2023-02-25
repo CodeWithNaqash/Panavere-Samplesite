@@ -4,7 +4,7 @@ import {
   Heading,
   Container,
   Button,
-  HStack,
+  SimpleGrid,
 } from '@chakra-ui/react';
 import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react';
 import { IoIosSpeedometer } from 'react-icons/io';
@@ -31,7 +31,7 @@ export default function Highligthsection() {
       </Box>
       <Container maxW={1100}>
         {/* Card Section Start */}
-        <HStack>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} gap="5">
           <Card align="center" variant={'outline'}>
             <Box color={'blue.500'} mt="5">
               <IoIosSpeedometer size={'80'}></IoIosSpeedometer>
@@ -108,7 +108,7 @@ export default function Highligthsection() {
               </Button>
             </CardFooter>
           </Card>
-        </HStack>
+        </SimpleGrid>
         {/* Card Section End*/}
       </Container>
     </Box>

@@ -1,11 +1,20 @@
-import { Flex, Box, Container, Text, HStack } from '@chakra-ui/react';
+import {
+  Flex,
+  Box,
+  Container,
+  Text,
+  HStack,
+  useColorMode,
+} from '@chakra-ui/react';
 import Link from 'next/link';
 import { FaDiscord, FaFacebook, FaGithub } from 'react-icons/fa';
 
 export default function Footer() {
+  const { colorMode } = useColorMode();
   return (
+    // bg={colorMode == 'light' ? 'gray.100' : 'black'}
     <Box>
-      <Container maxW={'100%'} bg={'gray.100'}>
+      <Container maxW={'100%'} bg={colorMode == 'light' ? 'gray.100' : 'black'}>
         <Flex justifyContent={'space-between'}>
           <Text color={'gray.500'} py={7}>
             © 2023 Panaverse. All rights reserved.
